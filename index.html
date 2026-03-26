@@ -2,28 +2,43 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>CloudProducts Store</title>
+  <title>CloudHub Store</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #0f172a, #1e3a8a);
+      background: #0b1120;
       color: white;
     }
 
     header {
-      padding: 20px;
+      padding: 25px;
       text-align: center;
-      background: #1e40af;
-      font-size: 26px;
+      background: linear-gradient(90deg, #1e3a8a, #2563eb);
+      font-size: 28px;
       font-weight: bold;
     }
 
+    .hero {
+      text-align: center;
+      padding: 40px 20px;
+      background: linear-gradient(135deg, #1e40af, #1e3a8a);
+    }
+
+    .hero h1 {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      color: #cbd5f5;
+    }
+
     .container {
-      padding: 20px;
       max-width: 1200px;
       margin: auto;
+      padding: 20px;
     }
 
     .category {
@@ -31,7 +46,7 @@
     }
 
     .category h2 {
-      border-left: 5px solid #60a5fa;
+      border-left: 5px solid #3b82f6;
       padding-left: 10px;
     }
 
@@ -43,23 +58,24 @@
     }
 
     .card {
-      background: #1e3a8a;
+      background: #111827;
       border-radius: 15px;
       padding: 15px;
       text-align: center;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.4);
       transition: 0.3s;
+      border: 1px solid #1f2937;
     }
 
     .card:hover {
-      transform: translateY(-5px) scale(1.03);
+      transform: translateY(-6px);
+      border-color: #3b82f6;
     }
 
     .card img {
       width: 100%;
-      border-radius: 10px;
       height: 150px;
       object-fit: cover;
+      border-radius: 10px;
     }
 
     .card h3 {
@@ -67,13 +83,13 @@
     }
 
     .price {
-      color: #93c5fd;
-      margin-bottom: 10px;
+      color: #60a5fa;
       font-weight: bold;
+      margin-bottom: 10px;
     }
 
     .buy-btn {
-      background: #3b82f6;
+      background: #2563eb;
       border: none;
       padding: 10px;
       width: 100%;
@@ -84,7 +100,7 @@
     }
 
     .buy-btn:hover {
-      background: #2563eb;
+      background: #1d4ed8;
     }
 
     .payment-note {
@@ -93,7 +109,6 @@
       background: #1e40af;
       border-radius: 10px;
       text-align: center;
-      font-size: 16px;
     }
 
     .discord-btn {
@@ -112,69 +127,69 @@
 <body>
 
 <header>
-  CloudProducts Store
+  CloudHub Store
 </header>
+
+<div class="hero">
+  <h1>Premium Digital Products</h1>
+  <p>Fast delivery • Trusted service • Best prices</p>
+</div>
 
 <div class="container">
 
-  <!-- Decorations -->
   <div class="category">
     <h2>Decorations</h2>
-
     <div class="items">
 
       <div class="card">
-        <img src="https://via.placeholder.com/200">
+        <img src="https://cdn-icons-png.flaticon.com/512/1828/1828884.png">
         <h3>Random Decorations / Profile Effects</h3>
         <div class="price">€0.79</div>
-        <button class="buy-btn" onclick="buyItem('https://cloudproducts.mysellauth.com/product/DECORATIONS')">Buy</button>
+        <button class="buy-btn" onclick="buyItem('YOUR-LINK-1')">Buy</button>
       </div>
 
       <div class="card">
-        <img src="https://via.placeholder.com/200">
+        <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png">
         <h3>Random Nameplates</h3>
         <div class="price">€0.85</div>
-        <button class="buy-btn" onclick="buyItem('https://cloudproducts.mysellauth.com/product/NAMEPLATES')">Buy</button>
+        <button class="buy-btn" onclick="buyItem('YOUR-LINK-2')">Buy</button>
       </div>
 
     </div>
   </div>
 
-  <!-- Cloud Plans -->
   <div class="category">
     <h2>Cloud Plans</h2>
-
     <div class="items">
 
       <div class="card">
-        <img src="https://via.placeholder.com/200">
+        <img src="https://cdn-icons-png.flaticon.com/512/4149/4149675.png">
         <h3>Cloud+ (Monthly)</h3>
         <div class="price">€4.90</div>
-        <button class="buy-btn" onclick="buyItem('https://cloudproducts.mysellauth.com/product/CLOUDPLUS')">Buy</button>
+        <button class="buy-btn" onclick="buyItem('YOUR-LINK-3')">Buy</button>
       </div>
 
       <div class="card">
-        <img src="https://via.placeholder.com/200">
+        <img src="https://cdn-icons-png.flaticon.com/512/4149/4149680.png">
         <h3>Cloud Pro (Monthly)</h3>
         <div class="price">€9.92</div>
-        <button class="buy-btn" onclick="buyItem('https://cloudproducts.mysellauth.com/product/CLOUDPRO')">Buy</button>
+        <button class="buy-btn" onclick="buyItem('YOUR-LINK-4')">Buy</button>
       </div>
 
     </div>
   </div>
 
-  <!-- Payment Note -->
   <div class="payment-note">
     ⚠️ If you want to pay using Card, PayPal, Apple Pay, or Venmo, please open a ticket in Discord before purchasing.
     <br>
-    <a class="discord-btn" href="#">Join Discord</a>
+    <a class="discord-btn" href="https://discord.gg/YOURSERVER">Join Discord</a>
   </div>
 
 </div>
 
 <script>
 function buyItem(link) {
-  alert("You are being redirected to checkout.\n\nIf you want to use Card, PayPal, Apple Pay, or Venmo, open a Discord ticket first.");
+  alert("Redirecting to checkout...\n\nIf you want to use Card, PayPal, Apple Pay, or Venmo, open a Discord ticket first.");
   window.location.href = link;
 }
 </script>
